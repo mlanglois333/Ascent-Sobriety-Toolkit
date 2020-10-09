@@ -1,0 +1,66 @@
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg" role="navigation">
+    <!-- Logo -->
+    <div class="navbar-brand text-center">
+        <img src="img/logos/logo-white.png" alt="mountain logo" class="logo">
+        <h1>ASCENT</h1>
+    </div>
+    <!-- toggle button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuList"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="menuList">
+        <ul class="navbar-nav my-2 my-lg-0">
+            <!-- home -->
+            <li class="nav-item">
+                <a class="nav-link" href="/counter">
+                    home
+                </a>
+            </li>
+            <!-- journal -->
+            <li class="nav-item">
+                <a class="nav-link" href="/journal">
+                    journal
+                </a>
+            </li>
+            <!-- logout button -->
+            <a href="/logout" class="nav-link"><button type="button" class="btn btn-outline-light" href="/logout">
+                    logout
+                </button></a>
+            {{!-- information link --}}
+            <li class="nav-item">
+                <a class="about-tag info-link" href="/info"><i class="fas fa-info-circle"></i> </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<main class="main-content">
+    <!-- Resource Title -->
+    <h2 class="resources-title">Popular Resources</h2>
+
+    <div class="main-content resource-box">
+
+        {{#each resource }}
+        {{> resource-block}}
+        {{/each}}
+
+    </div>
+
+</main>
+
+<!-- mobile menu -->
+<footer class="navbar fixed-bottom">
+    <div class="container footer">
+        <a href="/counter"><button class="btn" type="button" alt="counter-page"><i
+                    class="foot-icon fas fa-house-user"></i></button></a>
+        <a href="/journal"><button class="btn" type="button" alt="journal-page"><i
+                    class="foot-icon fas fa-book"></i></button></a>
+        <a href="/info"><button class="btn" type="button" alt="info-page"><i
+                    class="foot-icon fas fa-info-circle"></i></button></a>
+        <a href="/logout"><button class="btn" type="button" alt="logout"><i
+                    class="foot-icon fas fa-sign-out-alt"></i></button></a>
+    </div>
+</footer>
